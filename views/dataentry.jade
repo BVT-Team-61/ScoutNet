@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  // Wrapper
+  #wrapper
+
+    // ADD USER
+    h2 New Entry 
+    fieldset#formNewEntry(name="addmatch",method="post")
+        select#inputMatch(list="matches", placeholder="Match", name="match")
+            //Autofill Matches
+        select#inputTeam(list="teams", placeholder="Team", name="team")
+            //Autofill Teams
+        br
+        input#inputStatA(type="number", placeholder="High Goals", name="StatA")
+        input#inputStatB(type="number", placeholder="Low Goals", name="StatB")
+        br
+        input#inputStatC(type="number", placeholder="Throws", name="StatC")
+        input#inputStatD(type="number", placeholder="Catches", name="StatD")
+        br
+        textarea#inputComment(placeholder="Comments", name="comment")
+        br
+        button#btnSubmitEntry Create
+
+  script(src="/javascripts/dataentry.js")

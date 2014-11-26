@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  // Wrapper
+  #wrapper
+
+    // USER LIST
+    h2 Team List
+    #userList
+        input.search(placeholder="Search")
+        table
+            thead
+                th
+                  button.sort(data-sort="team") Team
+                th
+                  button.sort(data-sort="match") Match
+                th
+                  button.sort(data-sort="highGoals") High Goals
+                th
+                  button.sort(data-sort="lowGoals") Low Goals
+                th
+                  button.sort(data-sort="throws") Throws
+                th
+                  button.sort(data-sort="catches") Catches
+                th
+                  button.sort(data-sort="comment") Comment
+            tbody.list
+              each entry, i in entrylist 
+                tr
+                  td.id(style="display:none;")= entry.id
+                  td.teamid(style="display:none;")= entry.links.owner
+                  td.team ###
+                  td.matchid(style="display:none;")= entry.links.from
+                  td.match ###
+                  td.highGoals= entry.highGoals
+                  td.lowGoals= entry.lowGoals
+                  td.throws= entry.throws
+                  td.catches= entry.catches
+                  td.comment= entry.comment
+  script(src="/javascripts/list.min.js")
+  script(src="/javascripts/entries.js")

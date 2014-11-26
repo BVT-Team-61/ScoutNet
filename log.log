@@ -1,0 +1,1 @@
+Sun, 23 Nov 2014 03:59:56 GMT express deprecated res.send(status, body): Use res.status(status).send(body) instead at node_modules/fortune/lib/route.js:69:9

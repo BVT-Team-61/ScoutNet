@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  // Wrapper
+  #wrapper
+
+    // USER LIST
+    h2 Match List
+    #userList
+        table
+            thead
+                th Match Name
+            tbody
+              each match, i in matchlist
+                tr
+                  td
+                    = match.name
+
+    // ADD USER
+    h2 New Match 
+    fieldset#formNewMatch(name="addmatch",method="post")
+        input#inputName(type="text", placeholder="Match Name", name="name")
+        button#btnSubmitMatch Create
+  script(src="/javascripts/matchlist.js")

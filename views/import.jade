@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 IMPORTING IS IRREVERSABLE
+  h2 Only do this if you know what you are doing!
+  p Are you sure you want to import <b>#{eventid}</b>?
+  p Only do this if you have no current entries, teams, or matches!
+  p Serious problems can occur if this is not an empty database.
+  button#btnImport Import
+  script.
+    eventid = "#{eventid}"
+  script(src='/javascripts/import.js')
