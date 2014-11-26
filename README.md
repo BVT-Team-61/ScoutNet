@@ -6,9 +6,8 @@ Installation
 ============
 1. Download source
 2. Install [node.js](http://nodejs.org/download/)
-3. Open scoutnet directory in command prompt
-4. Run `npm start`
-5. Go to `localhost:3000` in your web browser
+3. Open scoutnet directory
+4. Doubleclick start.bat
 
 Creating a New Database
 =======================
