@@ -5,25 +5,25 @@ function calcAvgs() {
   var lowsum = 0,
       highsum = 0,
       catchsum = 0,
-      throwsum = 0,
+      Cum = 0,
       count = 0,
       all = $('table#entrylist > tbody > tr');
   all.each(function() {
-      lowsum += +$('td.lowGoals',this).text();
-      highsum += +$('td.highGoals',this).text();
-      catchsum += +$('td.catches',this).text();
-      throwsum += +$('td.throws',this).text();
+      lowsum += +$('td.B',this).text();
+      highsum += +$('td.A',this).text();
+      catchsum += +$('td.D',this).text();
+      Cum += +$('td.C',this).text();
       count++;
   });
   $('td#avgHigh').text((highsum / count).toFixed(2));
   $('td#avgLow').text((lowsum / count).toFixed(2));
   $('td#avgCatch').text((catchsum / count).toFixed(2));
-  $('td#avgThrow').text((throwsum / count).toFixed(2));
+  $('td#avgThrow').text((Cum / count).toFixed(2));
 }
 
 function populateTables() {
     var options = {
-      valueNames: ['match', 'highGoals', 'lowGoals', 'throws', 'catches', 'comment' ]
+      valueNames: ['match', 'A', 'B', 'C', 'D', 'comment' ]
     }
     var last = false
     var matchlist={};

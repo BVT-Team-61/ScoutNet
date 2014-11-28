@@ -2,11 +2,11 @@ $(document).ready(populateTables)
 
 function populateTables() {
     var options = {
-      valueNames: ['team', 'match', 'highGoals', 'lowGoals', 'throws', 'catches', 'comment' ]
+      valueNames: ['team', 'match', 'A', 'B', 'C', 'D', 'comment' ]
     }
     var last = false
     var matchlist={};
-    
+
     // jQuery AJAX call for JSON
     $.getJSON( '/api/matches', function( data ) {
 
@@ -16,12 +16,10 @@ function populateTables() {
         });
         $('table > tbody  > tr > td.match').each(function() {
             var matchId = $(this).closest('tr').find('.matchid').text();
-            console.log(matchId);
-            console.log(matchlist[matchId]);
             $(this).text(matchlist[matchId]);
       });
      if(last) {
-       userList = new List('userList', options); 
+       userList = new List('userList', options);
      }
      else last = true;
     });
@@ -34,19 +32,16 @@ function populateTables() {
         // For each item in our JSON, add a table row and cells to the content string
         $.each(data.teams, function() {
            teamlist[this.id] = this.teamNo;
-           console.log(this.id+":"+this.teamNo)
         });
 
         // Inject the whole content string into our existing HTML table
         $('table > tbody  > tr > td.team').each(function() {
             var teamId = $(this).closest('tr').find('.teamid').text();
-            console.log(teamId);
-            console.log(teamlist[teamId]);
             $(this).text(teamlist[teamId]);
       });
 
      if(last) {
-       userList = new List('userList', options); 
+       userList = new List('userList', options);
      }
      else last = true;
     });

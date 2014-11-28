@@ -56,10 +56,10 @@ function addEntry(event) {
             'entries':[{
               'from': $('fieldset#formNewEntry select#inputMatch').val(),
               'owner': $('fieldset#formNewEntry select#inputTeam').val(),
-              'highGoals': $('fieldset#formNewEntry input#inputStatA').val(),
-              'lowGoals': $('fieldset#formNewEntry input#inputStatB').val(),
-              'throws': $('fieldset#formNewEntry input#inputStatC').val(),
-              'catches': $('fieldset#formNewEntry input#inputStatD').val(),
+              'A': $('fieldset#formNewEntry input#inputStatA').val(),
+              'B': $('fieldset#formNewEntry input#inputStatB').val(),
+              'C': $('fieldset#formNewEntry input#inputStatC').val(),
+              'D': $('fieldset#formNewEntry input#inputStatD').val(),
               'comment': $('fieldset#formNewEntry textarea#inputComment').val()
             }]
         }
@@ -74,12 +74,12 @@ function addEntry(event) {
         }).done(function( response ) {
             // Clear the form inputs
             $('#formNewEntry fieldset input').val('');
-            location.reload(true);                
+            location.reload(true);
         });
     }
     else {
         // If errorCount is more than 0, error out
-        alert('Please fill in all fields');
+        alert('Please fill in all stats with a number.');
         return false;
     }
 };

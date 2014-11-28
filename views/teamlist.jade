@@ -6,24 +6,39 @@ block content
 
     // USER LIST
     h2 Team List
-    #userList
-        table
-            thead
-                th Team Name
-                th Team Number
-            tbody
-              each team, i in teamlist
-                tr
-                  td
-                    = team.name
-                  td
-                    = team.teamNo
-                  td
-                    a(href="/teams/#{team.id}").more More Info
+    #teamList
+      input.search(placeholder="Search")
+      table#teamTable
+          thead
+              th
+                button.sort(data-sort="name") Team Name
+              th
+                button.sort(data-sort="teamNo") Number
+              th
+                button.sort(data-sort="A")= niceNames[0]
+              th
+                button.sort(data-sort="B")= niceNames[1]
+              th
+                button.sort(data-sort="C")= niceNames[2]
+              th
+                button.sort(data-sort="D")= niceNames[3]
+          tbody.list
+            each team, i in teamlist
+              tr
+                td.name= team.name
+                td.teamNo= team.teamNo
+                td.A N/A
+                td.B N/A
+                td.C N/A
+                td.D N/A
+                td.id(style="display:none;")= team.id
+                td
+                  a(href="/teams/#{team.id}").more More Info
     // ADD USER
     h2 New Team
     fieldset#formNewTeam(name="addteam",method="post")
         input#inputName(type="text", placeholder="Team Name", name="name")
         input#inputTeamNo(type="number", placeholder="Team Number", name="teamNo")
         button#btnSubmitTeam Create
+  script(src="/javascripts/list.min.js")
   script(src='/javascripts/teamlist.js')
