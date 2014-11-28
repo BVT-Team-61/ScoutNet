@@ -23,11 +23,11 @@ Current Features
 * View averages and entries by team
 * Fully open JSON data API
 * **BETA** - Import data from [The Blue Alliance](http://www.thebluealliance.com/)
+* Custom stat names
+* Sort teams by averages
 
 Planned Features
 ================
-* Custom stat names
-* Sort teams by averages
 * Admin section for head scouter
 * API Documentation
 * Improved data importing
