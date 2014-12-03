@@ -2,7 +2,7 @@ $(document).ready(populateTables)
 
 function populateTables() {
     var options = {
-      valueNames: ['team', 'match', 'highGoals', 'lowGoals', 'throws', 'catches', 'comment' ]
+      valueNames: ['team', 'match', 'A', 'B', 'C', 'D', 'comment' ]
     }
     var last = false
     var matchlist={};

@@ -12,14 +12,14 @@ block content
           th Name
           td= team.name
         tr
-          th Avg High Goals 
+          th Avg High Goals
           td#avgHigh
-          th Avg Low Goals 
+          th Avg Low Goals
           td#avgLow
         tr
-          th Avg Throws
+          th Avg C
           td#avgThrow
-          th Avg Catches
+          th Avg D
           td#avgCatch
     br
     // ENTRY LIST
@@ -31,25 +31,25 @@ block content
                 th
                   button.sort(data-sort="match") Match
                 th
-                  button.sort(data-sort="highGoals") High Goals
+                  button.sort(data-sort="A")= niceNames[0]
                 th
-                  button.sort(data-sort="lowGoals") Low Goals
+                  button.sort(data-sort="B")= niceNames[1]
                 th
-                  button.sort(data-sort="throws") Throws
+                  button.sort(data-sort="C")= niceNames[2]
                 th
-                  button.sort(data-sort="catches") Catches
+                  button.sort(data-sort="D")= niceNames[3]
                 th
                   button.sort(data-sort="comment") Comment
             tbody.list
-              each entry, i in entrylist 
+              each entry, i in entrylist
                 tr
                   td.id(style="display:none;")= entry.id
                   td.matchid(style="display:none;")= entry.links.from
                   td.match ###
-                  td.highGoals= entry.highGoals
-                  td.lowGoals= entry.lowGoals
-                  td.throws= entry.throws
-                  td.catches= entry.catches
+                  td.A= entry.A
+                  td.B= entry.B
+                  td.C= entry.C
+                  td.D= entry.D
                   td.comment= entry.comment
   script(src="/javascripts/list.min.js")
   script(src="/javascripts/team.js")
