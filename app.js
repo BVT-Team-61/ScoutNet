@@ -7,8 +7,8 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var api = require('./routes/api')
-var importer = require('./routes/import')
+var api = require('./routes/api');
+var admin = require('./routes/admin');
 
 var app = express();
 
@@ -24,10 +24,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(function(req, res, next) {
+    req.loggedIn = (req.connection.remoteAddress === '127.0.0.1');
+    next();
+});
+
 app.use('/', routes);
 app.use('/users', users);
 app.use('/api', api);
-app.use('/import', importer);
+app.use('/admin', admin);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -44,6 +49,7 @@ if (app.get('env') === 'development') {
     app.use(function(err, req, res, next) {
         res.status(err.status || 500);
         res.render('error', {
+            title: err,
             message: err.message,
             error: err
         });
@@ -55,6 +61,7 @@ if (app.get('env') === 'development') {
 app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
+        title: err,
         message: err.message,
         error: {}
     });
