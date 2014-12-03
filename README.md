@@ -12,7 +12,7 @@ Installation
 
 Configuration
 -------------
-* Stat names are configured in the `nameNames` array defined in `views/layout.jade` (line 6)
+* Stat names are configured in the `niceNames` array defined in `views/layout.jade` (line 6)
 * Admin username and password is configured in `users.htpasswd` with the format `username:password`
 
 Clearing the Database
@@ -34,6 +34,6 @@ Current Features
 * Admin section for head scouter
 
 Planned Features
-================
+----------------
 * API Documentation
 * Easier database reset and configuration
