@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h2 Login
+  form#formNewMatch(name="login", action="/login", method="post")
+      input#inputPass(type="password", placeholder="Password", name="password")
+      button#btnLogin Login

@@ -7,11 +7,12 @@ html
     script(src='/javascripts/jquery.min.js')
     script(src='/javascripts/global.js')
     #head
-      h1= title 
+      h1= title
       #navbar
         a(href='/scouter').nav Data Entry
         a(href='/teams').nav Team List
         a(href='/entries').nav Entry List
         a(href='/matches').nav Match List
+        a(href='/admin').nav Admin
     #content
       block content

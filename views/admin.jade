@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  // Wrapper
+  #wrapper
+    // ADD TEAM
+    h2 New Team
+    fieldset#formNewTeam(name="addteam")
+      input#inputName(type="text", placeholder="Team Name", name="name")
+      input#inputTeamNo(type="number", placeholder="Team Number", name="teamNo")
+      button#btnSubmitTeam Create
+    // ADD USER
+    h2 New Match
+    fieldset#formNewMatch(name="addmatch")
+        input#inputName(type="text", placeholder="Match Name", name="name")
+        button#btnSubmitMatch Create
+    // ADD USER
+    h2 Import from TBA
+    fieldset#formImport(name="import")
+      select#importEvent(list="event", name="event")
+          //Autofill Teams
+      button#btnImport Import
+
+  script(src='/javascripts/admin.js')

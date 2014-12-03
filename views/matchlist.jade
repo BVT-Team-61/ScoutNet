@@ -15,10 +15,3 @@ block content
                 tr
                   td
                     = match.name
-
-    // ADD USER
-    h2 New Match 
-    fieldset#formNewMatch(name="addmatch",method="post")
-        input#inputName(type="text", placeholder="Match Name", name="name")
-        button#btnSubmitMatch Create
-  script(src="/javascripts/matchlist.js")

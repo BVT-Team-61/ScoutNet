@@ -16,6 +16,7 @@ function sortBy(property) {
         return result * sortOrder;
     }
 }
+
 /* GET home page. */
 router.get('/teams', function(req, res) {
   db.findMany('team').then( function(list) {

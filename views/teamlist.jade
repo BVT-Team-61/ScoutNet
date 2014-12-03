@@ -20,10 +20,4 @@ block content
                     = team.teamNo
                   td
                     a(href="/teams/#{team.id}").more More Info
-    // ADD USER
-    h2 New Team
-    fieldset#formNewTeam(name="addteam",method="post")
-        input#inputName(type="text", placeholder="Team Name", name="name")
-        input#inputTeamNo(type="number", placeholder="Team Number", name="teamNo")
-        button#btnSubmitTeam Create
   script(src='/javascripts/teamlist.js')
