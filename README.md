@@ -5,12 +5,18 @@ A web-based FRC scouting system written in Node.js and jQuery.
 Installation
 ============
 1. Download source
-2. Install [node.js](http://nodejs.org/download/)
-3. Open scoutnet directory
-4. Doubleclick start.bat
+3. Install [node.js](http://nodejs.org/download/)
+2. Run `npm install` to automatically install dependencies
+4. Open scoutnet directory
+5. Doubleclick start.bat
 
-Creating a New Database
-=======================
+Configuration
+-------------
+* Stat names are configured in the `nameNames` array defined in `views/layout.jade` (line 6)
+* Admin username and password is configured in `users.htpasswd` with the format `username:password`
+
+Clearing the Database
+=====================
 1. Close the ScoutNet server
 2. Open your scoutnet directory
 3. Go to the `node_modules\fortune\data\scoutnet` subdirectory
@@ -22,12 +28,12 @@ Current Features
 * Manually create matches and teams
 * View averages and entries by team
 * Fully open JSON data API
-* **BETA** - Import data from [The Blue Alliance](http://www.thebluealliance.com/)
+* Import data from [The Blue Alliance](http://www.thebluealliance.com/)
 * Custom stat names
 * Sort teams by averages
+* Admin section for head scouter
 
 Planned Features
 ================
-* Admin section for head scouter
 * API Documentation
-* Improved data importing
+* Easier database reset and configuration
