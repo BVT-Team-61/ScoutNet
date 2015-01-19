@@ -1,3 +1,6 @@
+# Seeking Pull Requests for 2015 Update
+Due to the nature of the 2015 FRC Game I will not be using this system for our team this year. If anyone would like to send a pull request with the necessary changes or make a fork to update for the 2015 game, please do so. I'd be glad to see this get some use.
+
 ScoutNet
 ========
 A web-based FRC scouting system written in Node.js and jQuery.
