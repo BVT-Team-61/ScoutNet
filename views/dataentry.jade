@@ -13,10 +13,21 @@ block content
             //Autofill Teams
         br
         input#inputStatA(type="number", placeholder="#{niceNames[0]}", name="StatA")
-        input#inputStatB(type="number", placeholder="#{niceNames[1]}", name="StatB")
         br
-        input#inputStatC(type="number", placeholder="#{niceNames[2]}", name="StatC")
-        input#inputStatD(type="number", placeholder="#{niceNames[3]}", name="StatD")
+        label= niceNames[1]
+        input#inputStatB(type="checkbox", name="StatB")
+        br
+        label= niceNames[2]
+        input#inputStatC(type="checkbox", name="StatC")
+        br
+        select#inputStatD(list="autoKey", placeholder="#{niceNames[3]}", name="StatD")
+            option(value="0") 0 No Auto
+            option(value="1") 1 Moves into auto zone
+            option(value="2") 2 Moves totes into auto zone
+            option(value="0") 3 Stacks Totes in auto zone
+            option(value="4") 4 Stacks Totes and moves bucket
+            option(value="5") 5 Above and Beyond
+        br
         br
         textarea#inputComment(placeholder="Comments", name="comment")
         br

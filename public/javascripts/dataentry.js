@@ -57,13 +57,14 @@ function addEntry(event) {
               'from': $('fieldset#formNewEntry select#inputMatch').val(),
               'owner': $('fieldset#formNewEntry select#inputTeam').val(),
               'A': $('fieldset#formNewEntry input#inputStatA').val(),
-              'B': $('fieldset#formNewEntry input#inputStatB').val(),
-              'C': $('fieldset#formNewEntry input#inputStatC').val(),
-              'D': $('fieldset#formNewEntry input#inputStatD').val(),
+              'B': $('fieldset#formNewEntry input#inputStatB').is(':checked')?1:0,
+              'C': $('fieldset#formNewEntry input#inputStatC').is(':checked')?1:0,
+              'D': $('fieldset#formNewEntry select#inputStatD').val(),
               'comment': $('fieldset#formNewEntry textarea#inputComment').val()
             }]
         }
 
+        console.log(newEntry.entries[0]);
         // Use AJAX to post the object to our adduser service
         $.ajax({
             type: 'POST',

@@ -98,11 +98,11 @@ function populateLists() {
     var listContent = '';
 
     // jQuery AJAX call for JSON
-    $.getJSON( '/api/events/2014b.json', function( data ) {
+    $.getJSON( '/api/events/2015.json', function( data ) {
 
         // For each item in our JSON, add a table row and cells to the content string
         $.each(data.sort(sortBy('name')), function(){
-            listContent += '<option value="'+this.key+'">';
+            listContent += '<option value="'+this.eventKey+'">';
             listContent += this.name;
             listContent += '</option>'
         });
