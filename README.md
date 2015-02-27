@@ -6,9 +6,9 @@ Installation
 ============
 1. Download source
 3. Install [node.js](http://nodejs.org/download/)
-2. Run `npm install` to automatically install dependencies
+2. Doubleclick install.bat (or run `npm install` on Linux)
 4. Open scoutnet directory
-5. Doubleclick start.bat
+5. Doubleclick start.bat (or run `npm start` on Linux)
 
 Configuration
 -------------
