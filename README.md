@@ -14,6 +14,14 @@ Configuration
 -------------
 * Stat names are configured in the `niceNames` array defined in `views/layout.jade` (line 6)
 * Admin username and password is configured in `users.htpasswd` with the format `username:password`
+* Import images of teams (requires python and PIL):
+  * Semi-Automatic Import  
+    * Add images to the imgen/images/ directory
+    * Edit imgen/index.csv to relate each picture to a team number.
+    * Run imgen.py
+  * Manual Import
+    * Copy each images to public/images/
+    * Rename each file to (team).png (61.png, 316.png, 663.png)
 
 Clearing the Database
 =====================
