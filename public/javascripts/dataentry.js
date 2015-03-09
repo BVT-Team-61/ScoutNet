@@ -56,10 +56,10 @@ function addEntry(event) {
             'entries':[{
               'from': $('fieldset#formNewEntry select#inputMatch').val(),
               'owner': $('fieldset#formNewEntry select#inputTeam').val(),
-              'A': $('fieldset#formNewEntry input#inputStatA').val(),
-              'B': $('fieldset#formNewEntry input#inputStatB').is(':checked')?1:0,
-              'C': $('fieldset#formNewEntry input#inputStatC').is(':checked')?1:0,
-              'D': $('fieldset#formNewEntry select#inputStatD').val(),
+              'A': $('fieldset#formNewEntry #inputStatA').val(),
+              'B': $('fieldset#formNewEntry #inputStatB').val(),
+              'C': $('fieldset#formNewEntry #inputStatC').val(),
+              'D': $('fieldset#formNewEntry #inputStatD').is(':checked')?1:0,
               'comment': $('fieldset#formNewEntry textarea#inputComment').val()
             }]
         }
