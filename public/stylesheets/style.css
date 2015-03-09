@@ -12,6 +12,15 @@ a {
   color: #00B7FF;
 }
 
+img {
+  display:inline;
+  float:right;
+}
+
+#teamPic {
+  max-width:25%;
+}
+
 #wrapper {
 	padding-left:20px;
 	position:relative;
@@ -40,7 +49,7 @@ th {
   border-radius: 5px;
 }
 td {
-  padding:5px; 
+  padding:5px;
   border:solid 1px #ddd;
   background-color:#eee;
   border-radius: 5px;
@@ -66,7 +75,7 @@ textarea:focus {
   border-color:#aaa;
 }
 .sort {
-  margin:5px 5px 5px 0px; 
+  margin:5px 5px 5px 0px;
   border-radius: 5px;
   border:solid 1px #aaa;
   border:none;
@@ -119,7 +128,7 @@ textarea:focus {
   right:-5px;
 }
 .nav {
-  padding:5px; 
+  padding:5px;
   border:solid 1px #aaa;
   border:none;
   border-radius: 5px;
@@ -134,7 +143,7 @@ textarea:focus {
   background-color:#1b8aba;
 }
 .navh {
-  padding:5px; 
+  padding:5px;
   border:solid 1px #aaa;
   border-radius: 5px;
   border:none;
@@ -143,7 +152,7 @@ textarea:focus {
   text-decoration: none;
 }
 #navbar {
-  padding:5px; 
+  padding:5px;
   border:solid 1px #aaa;
   border-radius: 5px;
   border:none;
@@ -155,7 +164,7 @@ textarea:focus {
 }
 #content {
   background-color:#fff;
-  padding:5px; 
+  padding:5px;
   border:solid 1px #aaa;
   border-radius: 5px;
   border:none;
@@ -163,11 +172,11 @@ textarea:focus {
 }
 .nostyle {
   background-color:#fff;
-  padding:5px; 
+  padding:5px;
   border:none;
 }
 .more {
-  padding:5px; 
+  padding:5px;
   border:solid 1px #aaa;
   border:none;
   border-radius: 5px;

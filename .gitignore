@@ -1,3 +1,8 @@
 *.bak
 *.log
 node_modules/
+public/images/*.png
+imgen/images/*.jpg
+imgen/images/*.png
+
+Thumbs.db
