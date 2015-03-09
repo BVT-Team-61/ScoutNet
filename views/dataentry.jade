@@ -12,25 +12,42 @@ block content
         select#inputTeam(list="teams", placeholder="Team", name="team")
             //Autofill Teams
         br
-        input#inputStatA(type="number", placeholder="#{niceNames[0]}", name="StatA")
         br
-        label= niceNames[1]
-        input#inputStatB(type="checkbox", name="StatB")
-        br
-        label= niceNames[2]
-        input#inputStatC(type="checkbox", name="StatC")
-        br
-        select#inputStatD(list="autoKey", placeholder="#{niceNames[3]}", name="StatD")
+        select#inputStatA(list="autoKey", placeholder="#{niceNames[0]}", name="StatA")
             option(value="0") 0 No Auto
-            option(value="1") 1 Moves into auto zone
-            option(value="2") 2 Moves totes into auto zone
-            option(value="0") 3 Stacks Totes in auto zone
-            option(value="4") 4 Stacks Totes and moves bucket
+            option(value="1") 1 Robot in auto zone
+            option(value="2") 2 Tote in auto zone
+            option(value="3") 3 Barrel in auto zone
+            option(value="4") 4 Tote + Barrel + Robot
             option(value="5") 5 Above and Beyond
+        br
+        br
+        input#inputStatB(type="number", placeholder="#{niceNames[1]}", name="StatB")
+        input#inputStatC(type="number", placeholder="#{niceNames[2]}", name="StatC")
+        br
+        label= niceNames[3]
+        input#inputStatD(type="checkbox", name="StatD")
         br
         br
         textarea#inputComment(placeholder="Comments", name="comment")
         br
         button#btnSubmitEntry Create
 
+    div#commentHelp
+      h3 Comment Guidelines
+      b Things to Include in Comments
+      ul
+        li Can they stack buckets?
+        li Did something break?
+        li No Show/Disabled?
+        li Are totes picked from landfill or human loaded?
+      b Things to avoid in Comments
+      ul
+        li ALL CAPS
+        li Rude/irrelevant jokes
+      b A note on formatting <br/>
+      ul
+        li All comments appear on a single line, no matter how many times you hit enter. <br/>
+        | If you have a multi-part comment, separate the parts with a semicolon (;).
+    br
   script(src="/javascripts/dataentry.js")
