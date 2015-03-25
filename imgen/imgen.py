@@ -21,6 +21,8 @@ with open('index.csv') as indexfile:
       maxwidth=600.0 # Maximum width. Default is 600.0
       maxheight=540.0 # Maximum height. 60px is added at bottom, so 540 here will become 600.
       with Image.open(baseimgpath) as baseimg:
+        if baseimg.size[0] > baseimg.size[1]:
+          baseimg = baseimg.rotate(-90)
         if baseimg.size[0] > maxwidth:
           ratio = (maxwidth/baseimg.size[0])
           print str(baseimg.size)+" * "+str(ratio)

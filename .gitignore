@@ -6,3 +6,5 @@ imgen/images/*.jpg
 imgen/images/*.png
 
 Thumbs.db
+desktop.ini
+*.zip
