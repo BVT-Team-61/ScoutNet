@@ -2,8 +2,7 @@
 var debug = require('debug')('scoutnet');
 var app = require('../app');
 
-app.set('port', process.env.PORT || 80);
-
+app.set('port', process.env.PORT || process.argv[2] || 80 );
 var server = app.listen(app.get('port'), function() {
   console.log('ScoutNet server listening on port localhost:' + server.address().port);
 });
